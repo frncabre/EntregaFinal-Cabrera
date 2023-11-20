@@ -5,7 +5,7 @@ Esta ecommerce todavia puede seguir en desarrollo
 
 # Para correr localmente
 ```sh
-git clone https://github.com/frncabre/PreEntrega1-Cabrera.git
+git clone https://github.com/frncabre/EntregaFinal-Cabrera.git
 cd ecommerce-cabrera
 npm install
 npm run dev
