@@ -7,6 +7,7 @@ export const useAsync = (asyncFunction, dependencies = []) => {
 
     useEffect(() => {
       setLoading(true)
+      setError(null)
       asyncFunction().then(result => {
         setdata(result);
       })

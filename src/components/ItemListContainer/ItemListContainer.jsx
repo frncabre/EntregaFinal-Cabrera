@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useAsync } from '../../hooks/useAsync';
-import { getProducts, getProductByCategory } from '../asyncMock';
+//import { getProducts, getProductByCategory } from '../asyncMock';
 import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
+import { getProducts } from '../../services/firebase/firebase/products'
 
 const ItemListContainer = ({ greeting }) => {
   const {categoryId} = useParams()
 
 
-  const asyncFunction = () => categoryId ? getProductByCategory(categoryId) : getProducts()
+  const asyncFunction = () => getProducts(categoryId)//categoryId ? getProductByCategory(categoryId) : getProducts()
 
   const {data: products, loading, error} = useAsync(asyncFunction, [categoryId])
 
